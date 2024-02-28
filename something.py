@@ -63,7 +63,10 @@ except ImportError:
             "installed if the torch.hub model you are loading depends on it."
         )
 
-
+from fairseq.hub_utils import (  # noqa; noqa
+    BPEHubInterface as bpe,
+    TokenizerHubInterface as tokenizer,
+)
 # automatically expose models defined in FairseqModel::hub_models
 for _model_type, _cls in MODEL_REGISTRY.items():
     for model_name in _cls.hub_models().keys():
