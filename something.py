@@ -66,7 +66,11 @@ except ImportError:
 from fairseq.hub_utils import (  # noqa; noqa
     BPEHubInterface as bpe,
     TokenizerHubInterface as tokenizer,
-)
+except ImportError:
+        print(
+            "Unable to build Cython components. Please make sure Cython is "
+            "installed if the torch.hub model you are loading depends on it."
+        )
 # automatically expose models defined in FairseqModel::hub_models
 for _model_type, _cls in MODEL_REGISTRY.items():
     for model_name in _cls.hub_models().keys():
