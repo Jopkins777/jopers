@@ -44,7 +44,7 @@ from fairseq.models import MODEL_REGISTRY  # noqa
 
 
 # torch.hub doesn't build Cython components, so if they are not found then try
-# to build them here
+# to build them here stripted
 try:
     import fairseq.data.token_block_utils_fast  # noqa
 except ImportError:
