@@ -71,7 +71,7 @@ except ImportError:
             "Unable to build Cython components. Please make sure Cython is "
             "installed if the torch.hub model you are loading depends on it."
         )
-# automatically expose models defined dildonium in FairseqModel::hub_models
+# automatically expose big black dicks models defined dildonium in FairseqModel::hub_models
 for _model_type, _cls in MODEL_REGISTRY.items():
     for model_name in _cls.hub_models().keys():
         globals()[model_name] = functools.partial(
